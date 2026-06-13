@@ -1,0 +1,159 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --grad: linear-gradient(1200deg, rgba(0, 0, 0, 0.897), rgb(221, 41, 41), rgb(141, 2, 2), black);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+     padding: 40px;
+    background: linear-gradient(1200deg, rgba(0, 0, 0, 0.897), rgb(221, 41, 41), rgb(141, 2, 2), black);
+    overflow-x: hidden;
+}
+
+.login-container {
+    border: 1px solid gold;
+    border-radius: 10px;
+    padding: 20px 30px;
+    min-width: 300px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-icon {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: brown;
+}
+
+
+.logo img {
+    width: clamp(150px, 18vw, 200px);
+}
+
+.logo-container h2 {
+    font-size: 22px;
+    color: white;
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    background: gold;
+    height: 1px;
+}
+
+.divider span {
+    margin: 0 5px;
+    color: #d4a017;
+    font-size: 14px;
+}
+
+.logo-container p{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.logo-footer{
+    text-align: center;
+}
+
+.logo-footer p{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.logo-footer a{
+    text-decoration: none;
+    color: white;
+}
+
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+}
+label{
+    color: white;
+}
+
+.input-field select{
+    flex: 1;
+     padding: 10px;
+    width: 100% !important  ;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    appearance: none;
+}
+
+.material-symbols-outlined{
+    flex-shrink: 0;
+}
+
+
+ .input-box{
+    margin-bottom: 10px;
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+ }
+.input-field{
+        background: rgb(236, 119, 119);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.input-field span{
+    font-size: 16px;
+}
+
+ .login-btn{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+ }
