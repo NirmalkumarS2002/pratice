@@ -96,64 +96,57 @@ body {
     color: white;
 }
 
-
-input{
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 10px;
-    color: rgb(0, 0, 0);
-}
-label{
-    color: white;
-}
-
-.input-field select{
-    flex: 1;
-     padding: 10px;
-    width: 100% !important  ;
-    min-width: 0;
-    border: none;
-    outline: none;
-    background: transparent;
-    appearance: none;
-}
-
-.material-symbols-outlined{
-    flex-shrink: 0;
-}
-
-
  .input-box{
-    margin-bottom: 10px;
-     display: flex;
-     flex-direction: column;
-     gap: 5px;
- }
-.input-field{
-        background: rgb(236, 119, 119);
-    width: 100%;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0px 10px;
-    box-sizing: border-box;
+    flex-direction: column;
+    gap: 5px;
+ }
+
+.input-field{
+    position: relative;
+    margin-bottom: 10px;
+}
+.input-field input,.input-field select{
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: rgb(241, 143, 143);
     border-radius: 10px;
 }
 
-.input-field span{
-    font-size: 16px;
+.single-icon{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 17px;
 }
 
- .login-btn{
+.pass-icon{
+    position: absolute;
+        top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+     font-size: 17px;
+}
+
+ .form .input-box:last-child{
+    margin-bottom: 10px;
+ }
+
+.login-btn{
     width: 100%;
-    gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:5px 10px;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: none;
- }
+    gap: 10px;
+      padding: 10px 5px;
+      border-radius: 10px;
+       border: none;
+    outline: none;}
+
+    .login-btn span{
+         font-size: 17px;
+    }
