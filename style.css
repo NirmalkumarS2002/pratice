@@ -13,16 +13,21 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-     padding: 40px;
+     padding: 50px 10px;
     background: linear-gradient(1200deg, rgba(0, 0, 0, 0.897), rgb(221, 41, 41), rgb(141, 2, 2), black);
     overflow-x: hidden;
 }
 
 .login-container {
-    border: 1px solid gold;
-    border-radius: 10px;
-    padding: 20px 30px;
-    min-width: 300px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: clamp(300px,32vw,350px);
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
 .logo-container {
@@ -45,7 +50,7 @@ body {
 
 
 .logo img {
-    width: clamp(150px, 18vw, 200px);
+    width: 180px;
 }
 
 .logo-container h2 {
@@ -57,7 +62,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0px;
+    margin: 10px auto;
+    width: 50%;
 }
 
 .divider::before,
@@ -114,8 +120,11 @@ body {
     outline: none;
     background: rgb(241, 143, 143);
     border-radius: 10px;
+    color: white
 }
-
+.input-field input::placeholder{
+    color: rgba(255,255,255,0.7);
+}
 .single-icon{
     position: absolute;
     top: 50%;
@@ -132,11 +141,9 @@ body {
      font-size: 17px;
 }
 
- .form .input-box:last-child{
-    margin-bottom: 10px;
- }
 
 .login-btn{
+     margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
