@@ -115,11 +115,16 @@ body {
 .input-field input,.input-field select{
     width: 100%;
     padding: 10px 40px 10px 50px;
-    appearance: none;
     border: none;
     outline: none;
     box-sizing: border-box;
      border-radius: 10px;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none ;
 }
 
 .single-icon{
@@ -138,6 +143,17 @@ body {
     transform: translateY(-50%);
     font-size: 20px;
 }
+
+
+.drop-icon{
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    display: none;
+}
+
 
 .login-btn{
    

@@ -48,7 +48,7 @@
                         <option value="Client">Client</option>
                     </select>
 
-                    <span class="material-symbols-outlined pass-icon">
+                    <span class="material-symbols-outlined drop-icon">
                         expand_more
                     </span>
 
@@ -62,7 +62,7 @@
                 <div class="input-field">
                     <span class="material-symbols-outlined  single-icon">mail</span>
                     <input type="email" placeholder="Enter Your Email" id="email">
-                </div>  
+                </div>
 
             </div>
 
@@ -70,9 +70,9 @@
                 <label for="password">Password</label>
 
                 <div class="input-field">
-                     <span class="material-symbols-outlined  single-icon">lock</span>
-                     <input type="passowrd" placeholder="Enter Your Password" id="password">
-                      <span class="material-symbols-outlined pass-icon">visibility</span>
+                    <span class="material-symbols-outlined  single-icon">lock</span>
+                    <input type="password" id="password">
+                    <span class="material-symbols-outlined pass-icon">visibility_off</span>
                 </div>
 
             </div>
@@ -94,6 +94,74 @@
 
 
     </div>
+
+    <script>
+
+        const form = document.querySelector(".form");
+
+        const role = document.getElementById("role");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+
+        const eyeIcon = document.querySelector(".pass-icon");
+
+        /* PASSWORD SHOW / HIDE */
+
+        eyeIcon.addEventListener("click", () => {
+
+            if (password.type === "password") {
+                password.type = "text";
+                eyeIcon.textContent = "visibility";
+            } else {
+                password.type = "password";
+                eyeIcon.textContent = "visibility_off";
+            }
+
+        });
+
+        /* FORM VALIDATION */
+
+        form.addEventListener("submit", (e) => {
+
+            e.preventDefault();
+
+            if (role.value === "") {
+                alert("Please select a role.");
+                return;
+            }
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email.value.trim())) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (password.value.trim().length < 6) {
+                alert("Password must contain at least 6 characters.");
+                return;
+            }
+
+            alert("Login Successful!");
+
+        });
+
+        const roleSelect = document.getElementById("role");
+        const dropIcon = document.querySelector(".drop-icon");
+
+        dropIcon.style.cursor = "pointer";
+
+        dropIcon.addEventListener("click", () => {
+            roleSelect.focus();
+
+            const event = new MouseEvent("mousedown", {
+                bubbles: true
+            });
+
+            roleSelect.dispatchEvent(event);
+        });
+    </script>
 </body>
 
 </html>
